@@ -3,77 +3,76 @@
         "options": [
             "MEN","WOMEN"
         ],
-        "icon": "🕹️",
+        "icon": "https://pics.freeicons.io/uploads/icons/png/5273873611625672091-512.png",
         "dropDownPlaceholder": "Select Gender"
     },
     "BRICK": {
         "options": [
             "JACKET","JEANS","POLO T-SHIRT","SHIRT","TROUSERS","T-SHIRT"
         ],
-        "icon": "⏰",
         "dropDownPlaceholder": "Select Brick"
     },
     "COLOR": {
         "options": [
             "Beige", "Black", "Blue","Brown","Green","Grey","Maroon","Multi","Navy","Orange","Pink","Red", "White"
         ],
-        "icon": "🎨",
+        "icon": "Color",
         "dropDownPlaceholder": "Select Color"
     },
     "PATTERN": {
         "options": [
             "Camouflage","Checks","Chevrons","Dyed/Washed","Graphic","Micro Print","Solid", "Stylised"
         ],
-        "icon": "🎬",
+        "icon": "Pattern",
         "dropDownPlaceholder": "Select Pattern"
     },
     "SLEEVES": {
         "options": [
             "Full Sleeves","Half Sleeves","Three-Quarters","-"
         ],
-        "icon": "🔢",
+        "icon": "Sleeves",
         "dropDownPlaceholder": "Select Sleeves"
     },
     "COLLAR/NECK": {
         "options": [
             "-","Band","Button-down","Classic","Hood","Lapel","Mandarin","Round","Shirt","Stylised","V-neck"
         ],
-        "icon": "🔢",
+        "icon": "Collar",
         "dropDownPlaceholder": "Select Collar/Neck"
     },
     "RISE": {
         "options": [
             "-","High Rise","Mid Rise"
         ],
-        "icon": "🔏",
+        "icon": "Rise",
         "dropDownPlaceholder": "Select Rise"
     },
     "FIT": {
         "options": [
             "Regular Fit","Relaxed Fit","Tailored Fit","Slim Fit"
         ],
-        "icon": "🔏",
+        "icon": "Fit",
         "dropDownPlaceholder": "Select Fit Type"
     },
     "PRICE_RANGE": {        
         "options": [
             "1,00,000+","10000-11000","12,000-15,000","12000-13000","14000-15000","15,000-18,000","15,000-20,000","16,000-18,000","19,000-21,000","21,000-24,000","21,000-25,000","22,000-24,000","25,000-27,000","25,000-30,000","26,000-30,000","31,000-35,000","40,000-50,000","41,000-45,000","46,000-50,000","51,000-60,000","56,000-60,000","61,000-70,000","71,000-80,000","81,000-90,000"
         ],
-        "icon": "🔏",
+        "icon": "Price",
         "dropDownPlaceholder": "Select Price Range"
     },
     "COLLECTION": {
         "options": [
             "Chinese New Year","Main","Travel Essential", "Emoji"
         ],
-        "icon": "🔏",
+        "icon": "Collection",
         "dropDownPlaceholder": "Select Collection Name"
     },
     "FABRIC_FAMILY": {
         "options": [
             "Cotton","Cupro","Leather","Modal","Polyester","Wool"
         ],
-        "icon": "🔏",
+        "icon": "Fabric",
         "dropDownPlaceholder": "Select Fabric Family"
     }
 }

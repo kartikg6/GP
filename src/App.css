@@ -1,4 +1,83 @@
-.App {
+.Form{
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 15px auto;
+  background-color: #2D3047;
+  /* border: 2px solid whitesmoke; */
+}
+
+.Navbar{
+  /* border: 2px solid black; */
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navtitle{
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Formlower{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.AttributeWrapper{
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.SubmitContainer{
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.Submit{
+  width: 120px;
+  /* height: 50px; */
+  background-color: #247B7B;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.ResultContainer{
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.RequestPass{
+color: #fff;
+font-weight: 500;
+font-size: 1.8rem;
+/* border: 1px pink solid; */
+background-color: #F6AE2D ;
+padding: 1rem;
+border-radius: 5px;
+}
+
+.RequestFail{
+color: #fff;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +114,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

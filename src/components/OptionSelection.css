@@ -1,0 +1,19 @@
+.AttributeContainer{
+    /* border: 2px solid black; */
+    width: 550px ;
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+.AttributeHeader{
+    /* border: 2px solid olive; */
+    width:45%;
+    font-size: 1.25rem;
+    color : #C9E4CA;
+    display: flex;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    /* flex-direction: row-reverse; */
+    justify-content: left;
+    /* font-weight: 300; */
+}

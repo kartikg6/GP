@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 import OptionSelection from './components/OptionSelection';
-import TypingTextComponent from './components/TypingTextComponent';
 import axios from 'axios';
+import Clothing from './images/Clothing.svg';
 
 function App() {
   const [selectedObject, updateSelectedObject] = useState({});
@@ -15,18 +15,23 @@ function App() {
     updateSelectedObject(tempSelectedObject);
   }
   const handleInputSubmission = () => {
-    if(selectedObject && Object.keys(selectedObject).length === 7) {
+    console.log(selectedObject);
+    console.log(Object.keys(selectedObject).length)
+    if(selectedObject && Object.keys(selectedObject).length === 11) {
       setPredictionLoading(true)
       setModelPrediction(null)
       setRequestFailed(null)
-      axios.post(process.env.REACT_APP_HEROKU_SERVER_URL, selectedObject)
-      .then(function (response) {
+      axios.post('https://sales-forecaster.herokuapp.com/get_prediction', 
+      selectedObject
+      )
+      .then((response) => {
         setPredictionLoading(false)
         setModelPrediction(response.data.result)
-      })
-      .catch(function (error) {
-        setPredictionLoading(false)
-        setRequestFailed("Some error ocurred while fetching prediction")
+      console.log(response);
+      }, (error) => {
+      setPredictionLoading(false)
+      setRequestFailed("Some error ocurred while fetching prediction")
+      console.log(error);
       });
     } else {
       setRequestFailed("Please select all fields before submitting request")
@@ -34,21 +39,22 @@ function App() {
   }
   const dropDownKeys = ["GENDER","BRICK","COLOR","PATTERN","SLEEVES","COLLAR/NECK","RISE","FIT","PRICE_RANGE","COLLECTION","FABRIC_FAMILY"];
   return (
-    <div className="App">
-      <nav className="navbar navbar-dark justify-content-center">
-        <center><h3 className="title"><span role="img" aria-label="game">👾</span> Video games sales prediction</h3></center>
+    <div className="Form">
+      <nav className="Navbar">
+      <img src={Clothing} alt="React Logo" style={{ height: '60px', width:'60px', marginRight:'20px' }} />
+        <h3 className="Navtitle"><span role="img" aria-label="game"></span>Sell Through Forecaster</h3>
+        <img src={Clothing} alt="React Logo" style={{ height: '60px', width:'60px', marginLeft:'20px' }} />
       </nav>
-      <TypingTextComponent />
-      <div className="container d-flex justify-content-center align-items-center flex-column">
-        <div className="container-grid">
+      <div className="Formlower">
+        <div className="AttributeWrapper">
         {
           dropDownKeys.map((item,index)=>{
             return <OptionSelection itemKey={item} setOptionInObject={setOptionInObject} key={index}/> 
           })
         }
         </div>
-        <div className="submit-button-container">
-          <button className="btn btn-grad" onClick={() => handleInputSubmission()}>
+        <div className="SubmitContainer">
+          <button className="btn btn-grad Submit" onClick={() => handleInputSubmission()}>
           {(() => {
             if(isPredictionLoading) {
               return(
@@ -64,13 +70,13 @@ function App() {
           })()}
           </button>
         </div>
-        <div className="mt-4">
+        <div className="ResultContainer">
           {modelPrediction ? 
-          <span className="h2">Predicted Sell Through: {modelPrediction.toFixed(2)}</span> 
+          <span className="RequestPass">Forecasted Sell Through: {modelPrediction.toFixed(2)}</span> 
           : 
           null }
           {isRequestFailed ? 
-          <span className="h4">{isRequestFailed}</span> 
+          <span className="RequestFail">{isRequestFailed}</span> 
           : 
           null }
         </div>
